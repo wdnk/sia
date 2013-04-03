@@ -15,8 +15,8 @@
     <!--Menu Legalisir Ijazah -->
 	<li>
     	<a href="#">LEGALISIR IJAZAH</a>
-        <a href="#">Sub Menu</a>
-        <a href="#">Sub Menu</a>
+        <a href="#">Sub Menu</a><br>
+        <a href="#">Sub Menu</a><br>
         <a href="#">Sub Menu</a>
     </li>
     
