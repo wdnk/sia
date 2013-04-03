@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en" >
-<head>
-<link href="css/menu.css" rel="stylesheet" type="text/css" />
-<link href="css/layout.css" rel="stylesheet" type="text/css" />
-</head>
-
-<body>
-<div class="container">
 <ul id="nav">
 	<!--Menu SI Monitor -->
 	<li>
@@ -21,7 +12,7 @@
         <a href="#">Sub Menu</a>
     </li>
     
-    <!--Menu Legalisir Ijazah-->
+    <!--Menu Legalisir Ijazah -->
 	<li>
     	<a href="#">LEGALISIR IJAZAH</a>
         <a href="#">Sub Menu</a>
@@ -45,6 +36,3 @@
         <a href="#">Sub Menu</a>
     </li>
 </ul>
-</body>
-
-</html>

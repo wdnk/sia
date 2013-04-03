@@ -1,4 +1,3 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -6,6 +5,8 @@
 <title>Sistem Informasi Akademik | Universitas Gadjah Mada</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link href="css/styles.css" rel="stylesheet" type="text/css" />
+<link href="css/menu.css" rel="stylesheet" type="text/css" />
+<link href="css/layout.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -15,14 +16,6 @@
       <div class="logo">
         <img src="img/logo.gif" width="3%" height="3%" />SISTEM INFORMASI AKADEMIK UNIVERSITAS GADJAH MADA
       </div>
-      <div class="clr"></div>
-      <div class="clr"></div>
-      <!--<div class="menu_nav">
-        <ul>
-          <?php include "navigasi.php";?>
-        </ul>
-      </div>
-	  -->
     </div>
   </div>
   <div class="clr"></div>
@@ -50,8 +43,6 @@
       <div class="clr"></div>
     </div>
   </div>
-
-
 
 <!-- end of main_container -->
 <div id="outer_frame">
