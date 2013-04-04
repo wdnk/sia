@@ -31,7 +31,14 @@
     <!--Menu Surat Izin -->
 	<li>
     	<a href="#">SURAT IZIN</a>
-        <a <? if($_GET['page'] == 'input_data'){ ?> class="active" <? } ?> href="index.php?page=input_data">Sub Menu</a>
+        <a 
+			<?php 
+				if($_GET['page'] == 'input_data')
+					{ 
+			?> 
+           				class="active" 
+			<?php } ?> 
+            href="index.php?page=input_data">Sub Menu</a>
         <a href="#">Sub Menu</a>
         <a href="#">Sub Menu</a>
     </li>
