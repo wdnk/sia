@@ -499,11 +499,11 @@ ol li .send { margin:16px 0 0 0;}
 table {
 	font-family: Verdana; 
 	font-size: 8pt;
-	border-width: 1px;
+	border-width: 0px;
 	border-style: solid;
-	border-color: #ccd2d2;
+	border-color: #fff;
 	border-collapse: collapse;
-	background-color: #f9f9f9;
+	background-color: #fff;
 	margin: 10px 0px;
 }
 
@@ -513,7 +513,7 @@ th {
 	text-transform: uppercase;
 	text-align: center;
 	padding: 0.5em;
-	border-width: 1px;
+	border-width: 0px;
 	border-style: solid;
 	border-color: #ccd2d2;
 	border-collapse: collapse;
@@ -524,7 +524,7 @@ td {
 	padding: 0.5em;
 	color: #272727;
 	vertical-align: top;
-	border-width: 1px;
+	border-width: 0px;
 	border-style: solid;
 	border-color: #ccd2d2;
 	border-collapse: collapse;

@@ -29,13 +29,13 @@ if (isset($_POST['user_id'])) {
     
     $loginStrGroup  = mysql_result($LoginKM,0,'level');
     
-    $_SESSION['MM_Username'] = $loginUsername;
-    $_SESSION['MM_UserGroup'] = $loginStrGroup;	      
+    $_SESSION['username'] = $loginUsername;
+    $_SESSION['usergroup'] = $loginStrGroup;	      
 
     if (isset($_SESSION['PrevUrl']) && false) {
       $MM_redirectLoginSuccess = $_SESSION['PrevUrl'];	
 	}
-	header("Location: index.php");
+	header("Location: index.php?page=evaluasi_satu");
 	}else{
 ?>
 <script language="JavaScript">
@@ -55,13 +55,11 @@ eval("alert(pesan, '" + id + "', 'toolbar=0,scrollbars=0,location=0,statusbar=0,
 ?>
 
 <form name="login" id="login" method="POST" action="<?php echo $loginFormAction; ?>" >
-<table align="center" vspace="100" height="270" width="278">
-<tr><td>
-  <table width="278" border="0" align="center">
+<table width="280" border="0" align="center">
     <tr>
       <? echo "$loginUsername"; ?>
       <? echo "$LoginRS" ?>
-      <td width="90"><font class="isi" color="#000000"> <b>User ID</b></font></td>
+      <td width="90"><font class="isi" color="#000000"> <b>Username</b></font></td>
       <td width="10"  class="isi"> <center><b>:</b></center> </td>
       <td width="100"  class="isi"><center><input name="user_id" type="text" id="user_id" size="20" maxlength="20" onChange="loginUser(this)"/></center></td></tr>
     <tr>
@@ -69,12 +67,9 @@ eval("alert(pesan, '" + id + "', 'toolbar=0,scrollbars=0,location=0,statusbar=0,
       <td width="10" class="isi"> <center><b>:</b></center> </td>
       <td width="100" class="isi"><center><input name="password" type="password" id="password" size="20" maxlength="20" onChange="loginUser(this)"/></center></td>
       </tr>
-    <tr><td colspan="3">&nbsp;</td></tr>
     <tr>
-      <td align="center" colspan="3"><input name="Submit" type="submit" value="Login" onChange="dataLogin" /></td></tr>
+      <td align="right" colspan="3"><input name="Submit" type="submit" value="Login" onChange="dataLogin" /></td></tr>
     </table>
-</td></tr>
-</table>
 </form>
 </body>
 </html>
