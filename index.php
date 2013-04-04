@@ -27,7 +27,17 @@
 	  </div>
 	  <div class="mainbar">
         <div class="article">
-          test
+        	<?php
+				if (isset($_REQUEST['page'])){
+					$tampil=$_REQUEST['page'];
+				}
+					if(empty($tampil)){
+					  $halaman="page";
+					}else{
+					  $halaman=$tampil;
+					}
+					include $halaman.".php";
+			?>
        </div>
       <div class="clr"></div>
     </div>
