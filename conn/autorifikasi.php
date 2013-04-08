@@ -1,6 +1,6 @@
 <?
 session_start(); 
-if(!session_is_registered("username")){ 
-header("location:login.php");
+if(!isset($_SESSION['eval_username'])){ 
+	header("location:index.php?page=login_evaluasi");
 }
 ?>
