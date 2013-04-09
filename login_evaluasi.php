@@ -1,55 +1,45 @@
-<?php require_once('conn/sia.php'); ?>
 <?php
-session_start();
-// *** Validate request to login to this site.
-if (!isset($_SESSION)) {
+
+require_once('conn/sia.php');
+
+if(!isset($_SESSION)){
   session_start();
 }
 
-$loginFormAction = $_SERVER['PHP_SELF'];
-if (isset($_GET['accesscheck'])) {
-  $_SESSION['PrevUrl'] = $_GET['accesscheck'];
-}
-
-if (isset($_POST['username'])) {
-  $loginUsername=$_POST['username'];
-  $password=$_POST['password'];
-  $Eval_fldUserAuthorization = "level";
-  $Eval_redirectLoginSuccess = "index.php?page=evaluasi_satu";
-  $Eval_redirectLoginFailed = "index.php?page=login_evaluasi";
-  $Eval_redirecttoReferrer = false;
-  
-  mysql_select_db($database_akademik, $akademik);
-  	
-  $LoginEvaluasi__query=sprintf("SELECT `username`, `password`, `level`, `real` FROM `user` WHERE username='%s' AND password='%s'",
-  get_magic_quotes_gpc() ? $loginUsername : addslashes($loginUsername), get_magic_quotes_gpc() ? $password : addslashes($password)); 
-   
-  $LoginEval = mysql_query($LoginEvaluasi__query, $akademik) or die(mysql_error());
-  $loginFoundUser = mysql_num_rows($LoginEval);
-  if ($loginFoundUser) {
-    
-    $loginStrGroup  = mysql_result($LoginEval,0,'level');
-    
-    $_SESSION['eval_username'] = $loginUsername;
-    $_SESSION['eval_usergroup'] = $loginStrGroup;	      
-
-    if (isset($_SESSION['PrevUrl']) && false) {
-      $Eval_redirectLoginSuccess = $_SESSION['PrevUrl'];	
-	}
-	  header("Location: index.php?page=evaluasi_satu");
-	}else{
+$loginFormAction = "login_evaluasi.php";
+if(isset($_POST['username'])){
+    $username = $_POST['username']; 
+    $password = $_POST['password']; 
+    $query="SELECT username, password FROM user where username='$username' && password='$password'";
+    $result=mysql_query($query); 
+    //echo $query;
+    //exit;  
+    if(mysql_num_rows($result)>0) {  
+             list ($username,$password) = mysql_fetch_row($result);  
+              $_SESSION['username']=$username;
+              $sql=mysql_query("select level from user where username='$_SESSION[username]'");
+              $result=mysql_fetch_row($sql);
+              $level=$result[0];
+              if($level=="user"){
+                header ("location:index.php?page=user");
+              }elseif($level=="admin" ){
+                  header ("location:index.php?page=admin");
+              }else{
+                  echo "evaluasi satu";
+              }
+     }else{
 ?>
-<script language="JavaScript">
-<!-- Begin
-function popUp(pesan) {
-window.location.href="index.php?page=login_evaluasi";
-day = new Date();
-id = day.getTime();
-eval("alert(pesan, '" + id + "', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=0,height=0,left = 0,top = 0');");
-}
-// End -->
-	popUp('Input yang anda masukkan salah, silahkan ulangi lagi!');
-	</script>
+        <script language="JavaScript">
+          <!-- Begin
+          function popUp(pesan) {
+            window.location.href="index.php?page=login_evaluasi";
+            day = new Date();
+            id = day.getTime();
+            eval("alert(pesan, '" + id + "', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=0,height=0,left = 0,top = 0');");
+          }
+          // End -->
+	         popUp('Input yang anda masukkan salah, silahkan ulangi lagi!');
+        </script>
 <?php
   }
 }
