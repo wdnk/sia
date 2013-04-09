@@ -3,7 +3,8 @@ if (!isset($_SESSION)) {
   session_start();
 }
 
-if(!isset($_SESSION['username'])){ 
+if(!isset($_SESSION['username'])){
+  echo "Maaf, Anda belum login";
   header("location:index.php?page=login_evaluasi");
 }else{
   $sql=mysql_query("select level from user where username='$_SESSION[username]'");

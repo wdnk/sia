@@ -833,6 +833,12 @@ display:block;
 }
 
 
+#tanggal {
+		font-size: 11px;
+		color: #888;
+		line-height: 1.5em;
+		padding-left: 540px;
+}
 /********************************      Sidebar      ********************************/
 
 #sidebar {
@@ -851,7 +857,7 @@ display:block;
 
 #sidebar a,
 #sidebar a:active {
-                color:#ccc;
+                color:#4300ff;
                 }
 
 #sidebar a:hover {
@@ -867,16 +873,17 @@ display:block;
                 }
 
 #sidebar #profile-links {
-                padding: 0 15px 20px 15px;
+                padding: 80px 10px 0px 0px;
                 text-align: right;
                 line-height: 1.5em;
+                color: #000;
                 }
 /************ Sidebar Accordion Menu ************/
 
 #sidebar #main-nav {
                 width: 206px;
                 padding: 0;
-                padding-top: 100px;
+                padding-top: 20px;
                 margin: 0 0 0 15px;
                 font-family: Helvetica, Arial, sans-serif;
                 }
@@ -1086,7 +1093,7 @@ a.remove-link:hover {
 /************ Layout ************/
 
 #main-content {
-                margin: 0 30px 0 260px;
+                margin: 0px 45px 0 260px;
                 padding: 5px 0 0 0;
                 }
 
@@ -1108,7 +1115,7 @@ a.remove-link:hover {
 				
 #footer {
 				border-top: 1px solid #ccc;
-				margin: 450px 0 0 0;
+				margin: 420px 0 0 0;
 				padding: 20px 0;
 				font-size: 12px;
 				vertical-align: bottom;

@@ -35,6 +35,8 @@
 			<?php include "navigasi.php";?>
 	  </div>
 	  <div id="main-content">
+        <div id="tanggal"><?php include "tanggal.php"; ?></div>
+        <br><br>
         <noscript> <!-- Show a notification if the user has disabled javascript -->
           <div class="notification error png_bg">
             <div>

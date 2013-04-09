@@ -6,19 +6,15 @@ if (!isset($_SESSION)) {
 }
 
 if ($logoutGoTo != "") {
-	$_SESSION['eval_username'] = NULL;
-	$_SESSION['eval_UserGroup'] = NULL;
-	unset($_SESSION['MM_Username']);
-	unset($_SESSION['MM_UserGroup']);
+	$_SESSION['username'] = NULL;
+	unset($_SESSION['username']);
 	header("Location: $logoutGoTo");
 	echo "<script language=\"javascript\" type=\"text/javascript\">
-		alert('Terima kasih $_SESSION[eval_Username], sampai jumpa')</script>";
+		alert('Terima kasih $_SESSION[username], sampai jumpa')</script>";
 	exit;
 }
 
-$_SESSION['eval_username'] = NULL;
-$_SESSION['eval_UserGroup'] = NULL;
-unset($_SESSION['MM_Username']);
-unset($_SESSION['MM_UserGroup']);
+$_SESSION['username'] = NULL;
+unset($_SESSION['username']);
 
 ?>
