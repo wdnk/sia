@@ -10,6 +10,8 @@ $loginFormAction = "login_evaluasi.php";
 if(isset($_POST['username'])){
     $username = $_POST['username']; 
     $password = $_POST['password']; 
+    $username = mysql_real_escape_string($username);
+    $password = mysql_real_escape_string($password);
     $query="SELECT username, password FROM user where username='$username' && password='$password'";
     $result=mysql_query($query); 
     //echo $query;
@@ -26,7 +28,7 @@ if(isset($_POST['username'])){
               }elseif($level=="admin" ){
                   header ("location:index.php?page=admin");
               }else{
-                  echo "evaluasi satu";
+                  header ("location:index.php?page=login_evaluasi");
               }
      }else{
 ?>

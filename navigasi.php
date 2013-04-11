@@ -13,14 +13,16 @@ if(isset($_GET['page'])) {
  <div id="sidebar"><div id="sidebar-wrapper">
             <!-- Sidebar Profil -->
             <div id="profile-links">
-                Selamat datang, <a href="#" title="Ubah Profile">
+            <!--   
                 <?php 
                 if(isset($_SESSION['username'])){ 
+                    echo "Selamat datang, <a href='#' title='Ubah Profile'>";
                     echo $_SESSION['username'];
+                    echo "</a><br />";
+                    echo "<a href='logout_evaluasi.php' title='Sign Out'>Sign Out</a>";
                 }
                 ?>
-                </a><br />
-                <a href="logout_evaluasi.php" title="Sign Out">Sign Out</a>
+            --> 
             </div>
 
             <ul id="main-nav">  <!-- Accordion Menu -->
@@ -36,8 +38,7 @@ if(isset($_GET['page'])) {
                         Pengurus FT
                     </a>       
                 </li>
-
-                <li> 
+                <!--<li> 
                     <a href="#" <?php if($page == 'evaluasi_satu' || $page == 'evaluasi_dua'){ ?> class="nav-top-item current" <?php }else{ ?> class="nav-top-item" <?php } ?> > 
                     Evaluasi Study
                     </a>
@@ -45,7 +46,7 @@ if(isset($_GET['page'])) {
                         <li><a <?php if($page == 'evaluasi_satu'){ ?> class="current" <?php } ?> href="index.php?page=evaluasi_satu">Evaluasi I</a></li>
                         <li><a <?php if($page == 'evaluasi_satu'){ ?> class="current" <?php } ?> href="index.php?page=evaluasi_dua">Evaluasi II</a></li>
                     </ul>
-                </li>
+                </li>--> 
                 
                 <li>
                     <a href="#" <?php if($page == 'legalisir_ijazah' || $page == 'verifikasi_ijazah'){ ?> class="nav-top-item current" <?php }else{ ?> class="nav-top-item" <?php } ?> >

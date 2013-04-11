@@ -24,7 +24,7 @@
   <div class="header">
     <div class="header_resize">
       <div class="logo">
-        <img src="img/logo.gif" width="3%" height="3%" />SISTEM INFORMASI AKADEMIK UNIVERSITAS GADJAH MADA
+        <img src="img/logo.gif" width="3%" height="3%" />SISTEM INFORMASI AKADEMIK FAKULTAS TEKNIK UNIVERSITAS GADJAH MADA
       </div>
     </div>
   </div>

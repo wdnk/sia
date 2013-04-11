@@ -4,6 +4,7 @@ if (!isset($_SESSION)) {
 }
 
 if(!isset($_SESSION['username'])){
+  echo $_SESSION['username'];
   echo "Maaf, Anda belum login";
   header("location:index.php?page=login_evaluasi");
 }else{
@@ -15,7 +16,7 @@ if(!isset($_SESSION['username'])){
   }elseif($level=="admin" ){
       header ("location:index.php?page=admin");
   }else{
-      echo "evaluasi satu";
+      header ("location:index.php?page=login_evaluasi");
   }
 }
 ?>
